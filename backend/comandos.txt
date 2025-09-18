@@ -1,0 +1,8 @@
+comando para craiação do package.json e instalação do express, bcrypt, cors e mysql12
+
+faça todos os downloads dando cd na pasta backend
+
+1º comando: npm init -y
+2º comando para desbloquear bcrypt: npm config set strict-ssl false
+3º comando: npm install express mysql2 bcryptjs express-session
+4º comando: npm install cors

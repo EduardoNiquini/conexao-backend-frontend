@@ -44,27 +44,29 @@
               <i class="bi bi-person-fill me-1"></i>Login
             </a>
           </li>
-          <!-- Added user dropdown menu that appears after login -->
+
+          <!-- Dropdown que aparece após login -->
+        
+          
+          <!-- Dropdown que aparece após login -->
           <li class="nav-item dropdown d-none" id="userDropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
               <i class="bi bi-person-circle me-1"></i><span id="userName">Usuário</span>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Meu Perfil</a></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Configurações</a></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-file-text me-2"></i>Meus Planos</a></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-credit-card me-2"></i>Pagamentos</a></li>
+              <li><hr class="dropdown-divider"></li>
               <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#" id="logoutBtn"><i class="bi bi-box-arrow-right me-2"></i>Sair</a>
+                <a class="dropdown-item" href="#" id="logoutBtn">
+                  <i class="bi bi-box-arrow-right me-2"></i>Sair
+                </a>
               </li>
             </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
+          </li>          
   </nav>
 
   <!-- Home / Hero Section -->
@@ -72,7 +74,8 @@
     <div class="container">
       <h1 class="display-4 fw-bold">Proteja sua empresa com a ProtecMax</h1>
       <p class="lead">Soluções avançadas em segurança digital para seu negócio crescer sem preocupações.</p>
-      <a href="#precos" class="btn btn-light btn-lg mt-3" aria-label="Veja nossos planos e preços">Conheça nossos
+      <a href="#precos" class="btn btn-light btn-lg mt-3" aria-label="Veja nossos planos e preços">Conheça
+        nossos
         planos</a>
     </div>
   </header>
@@ -134,7 +137,8 @@
           <div class="card border-primary h-100 text-center shadow-sm">
             <div class="card-header bg-primary text-white">Básico</div>
             <div class="card-body d-flex flex-column">
-              <h2 class="card-title pricing-card-title">R$29 <small class="text-muted fw-light">/ mês</small></h2>
+              <h2 class="card-title pricing-card-title">R$29 <small class="text-muted fw-light">/ mês</small>
+              </h2>
               <ul class="list-unstyled mt-3 mb-4 text-start flex-grow-1">
                 <li><i class="bi bi-check-circle-fill text-primary me-2"></i>10 usuários incluídos</li>
                 <li><i class="bi bi-check-circle-fill text-primary me-2"></i>2 GB de armazenamento</li>
@@ -150,7 +154,8 @@
           <div class="card border-success h-100 text-center shadow-sm">
             <div class="card-header bg-success text-white">Pro</div>
             <div class="card-body d-flex flex-column">
-              <h2 class="card-title pricing-card-title">R$59 <small class="text-muted fw-light">/ mês</small></h2>
+              <h2 class="card-title pricing-card-title">R$59 <small class="text-muted fw-light">/ mês</small>
+              </h2>
               <ul class="list-unstyled mt-3 mb-4 text-start flex-grow-1">
                 <li><i class="bi bi-check-circle-fill text-success me-2"></i>20 usuários incluídos</li>
                 <li><i class="bi bi-check-circle-fill text-success me-2"></i>10 GB de armazenamento</li>
@@ -166,7 +171,8 @@
           <div class="card border-warning h-100 text-center shadow-sm">
             <div class="card-header bg-warning text-dark">Empresarial</div>
             <div class="card-body d-flex flex-column">
-              <h2 class="card-title pricing-card-title">R$99 <small class="text-muted fw-light">/ mês</small></h2>
+              <h2 class="card-title pricing-card-title">R$99 <small class="text-muted fw-light">/ mês</small>
+              </h2>
               <ul class="list-unstyled mt-3 mb-4 text-start flex-grow-1">
                 <li><i class="bi bi-check-circle-fill text-warning me-2"></i>50 usuários incluídos</li>
                 <li><i class="bi bi-check-circle-fill text-warning me-2"></i>30 GB de armazenamento</li>
@@ -261,11 +267,13 @@
     <section id="sobre" class="mb-5" data-aos="fade-up">
       <h2 class="text-center mb-4">Sobre a ProtecMax</h2>
       <p class="lead text-center mx-auto" style="max-width: 720px;">
-        Fundada em 2020, a ProtecMax é uma empresa dedicada a fornecer as melhores soluções de segurança digital para
+        Fundada em 2020, a ProtecMax é uma empresa dedicada a fornecer as melhores soluções de segurança digital
+        para
         empresas de todos os tamanhos.
       </p>
       <p class="text-center mx-auto" style="max-width: 720px;">
-        Nossa equipe conta com especialistas altamente qualificados, sempre atualizados com as últimas tecnologias e
+        Nossa equipe conta com especialistas altamente qualificados, sempre atualizados com as últimas
+        tecnologias e
         práticas de segurança.
       </p>
     </section>
@@ -320,7 +328,7 @@
                   </label>
                 </div>
                 <div class="d-grid gap-2">
-                  <button type="submit" class="btn btn-primary">
+                  <button type="button" class="btn btn-primary" onclick="login_usuario()">
                     <i class="bi bi-box-arrow-in-right me-1"></i>Entrar
                   </button>
                 </div>
@@ -352,13 +360,6 @@
                   <input type="password" class="form-control" id="registerPassword" placeholder="Mínimo 6 caracteres"
                     required minlength="6">
                 </div>
-                <div class="mb-3">
-                  <label for="confirmPassword" class="form-label">
-                    <i class="bi bi-lock-fill me-1"></i>Confirmar Senha
-                  </label>
-                  <input type="password" class="form-control" id="confirmPassword" placeholder="Confirme sua senha"
-                    required>
-                </div>
                 <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="acceptTerms" required>
                   <label class="form-check-label" for="acceptTerms">
@@ -367,7 +368,7 @@
                   </label>
                 </div>
                 <div class="d-grid gap-2">
-                  <button type="submit" class="btn btn-success">
+                  <button type="button" class="btn btn-success" onclick="cadastrar_usuario()">
                     <i class="bi bi-person-plus me-1"></i>Criar Conta
                   </button>
                 </div>
